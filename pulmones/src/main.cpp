@@ -88,8 +88,7 @@ void loop() {
 
 void readPlantower() {
   int sec = second();
-  if (sec == 0 || sec == 15 || sec == 20 || sec == 25 || sec == 30 || sec == 40 || sec == 50 ||
-      sec == 5 || sec == 10 || sec == 35 || sec == 35 || sec == 45 || sec == 55) {
+  if (sec % 5) {
     if (pms.read(data)) { 
       pm2_5 = data.PM_AE_UG_2_5; 
       updateValues(); 
